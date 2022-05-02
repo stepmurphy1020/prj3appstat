@@ -8,10 +8,9 @@ public class data {
 	static ArrayList<Double> data3 = new ArrayList<>();
 	// adds data points to the data ArrayList on the interval a to b
 	public void addData(double a, double b) {
-
+		Function F = new Function(); 
 		for (double i = a; i < b; i++) {
-			double c = ((3 * (i * i)) + (4 * i) + 12);
-			data1.add(c);
+			F.function(i);
 		}
 	}
 }

@@ -40,7 +40,7 @@ public class graph extends JFrame {
 		String series1 = "OriginalData";
 		String series2 = "SaltedData";
 		String series3 = "SmoothedData";
-		for (int i = 0; i < SaltandSmooth.data.data1.size()-3; i++) {
+		for (int i = 0; i < SaltandSmooth.data.data1.size()-1; i++) {
 			// creates an integer i that will but used as a data point in the making of the
 			// data
 			double a = SaltandSmooth.data.data1.get(i);
