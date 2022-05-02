@@ -5,9 +5,11 @@ import javax.swing.SwingUtilities;
 public class Main {
 	public static void main(String[] args) {
 		data h = new data();
-		h.addData(0, 8);
+		h.addData(-30,30);
 		System.out.print(data.data1);
-
+		Salter S = new Salter();
+		S.salter();
+		System.out.print(data.data2);
 		SwingUtilities.invokeLater(new Runnable() {
 			@Override
 			public void run() {

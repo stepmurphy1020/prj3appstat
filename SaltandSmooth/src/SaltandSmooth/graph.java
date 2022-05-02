@@ -38,11 +38,15 @@ public class graph extends JFrame {
 		String series1 = "SaltedData";
 		String series2 = "SmoothedData";
 		for (int i = 0; i < SaltandSmooth.data.data1.size(); i++) {
-			data.addValue(i, series1, SaltandSmooth.data.data1.get(i));
+			//creates an integer i that will but used as a data point in the making of the data
+			int a = SaltandSmooth.data.data1.get(i);
+			int c = SaltandSmooth.data.data2.get(i);
+			//creates a string of the integer i to add to the x value of the graph
+			String b = Integer.toString(i);
+			
+			data.addValue(a, series1, b);
+			data.addValue(c, series2, b);
 
-		}
-		for (int l = 0; l < SaltandSmooth.data.data2.size(); l++) {
-			data.addValue(l, series2, SaltandSmooth.data.data1.get(l));
 		}
 		return data;
 	}
