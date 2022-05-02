@@ -8,9 +8,7 @@ public class Salter {
 	public void salter() {
 
 		// generates a random number
-		double a = r.nextInt(5500);
-
-		// calculates the y values when x is 0 to 20
+		double a = r.nextInt(10000);
 		for (int i = 0; i <= data.data1.size() - 1; i++) {
 			// sets an array that either subtracts or adds the amount specified
 			double[] change = { -a, a };
