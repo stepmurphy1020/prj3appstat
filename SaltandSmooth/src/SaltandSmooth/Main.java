@@ -1,13 +1,14 @@
 package SaltandSmooth;
 
 import javax.swing.SwingUtilities;
+
 import java.util.Scanner;
 
 public class Main {
 	static Scanner SCAN = new Scanner(System.in);
-	static int lowerbound;
-	static int upperbound;
-
+	static double lowerbound;
+	static double upperbound;
+	
 	public static void main(String[] args) {
 		System.out.println("Please input an upperbound for the Graph");
 		Main.upperbound = SCAN.nextInt();
@@ -15,11 +16,14 @@ public class Main {
 		Main.lowerbound = SCAN.nextInt();
 
 		data h = new data();
-		h.addData(lowerbound, upperbound);
-		System.out.println("Original Data:" + data.data1);
+		h.addData(lowerbound, upperbound+1);
+		System.out.println("Original Data: " + data.data1);
 		Salter S = new Salter();
 		S.salter();
-		System.out.println("Salted Data:" + data.data2);
+		System.out.println("Salted Data: " + data.data2);
+		Smoother Sm = new Smoother();
+		Sm.smoother();
+		System.out.println("Smoothed Data: "+data.data3);
 		SwingUtilities.invokeLater(new Runnable() {
 			@Override
 			public void run() {
@@ -27,6 +31,5 @@ public class Main {
 			}
 		});
 
-		System.out.println(graph.d);
 	}
 }

@@ -12,7 +12,7 @@ import org.jfree.data.category.CategoryDataset;
 import org.jfree.data.category.DefaultCategoryDataset;
 
 public class graph extends JFrame {
-	static int d = Main.lowerbound;
+	static double d = Main.lowerbound;
 
 	public graph() {
 		// super("Line Chart With Example with JFreechart");
@@ -37,20 +37,22 @@ public class graph extends JFrame {
 
 	private CategoryDataset createGraphData() {
 		DefaultCategoryDataset data = new DefaultCategoryDataset();
-		// int d = Main.lowerbound;
-		String series1 = "SaltedData";
-		String series2 = "SmoothedData";
-		for (int i = 0; i < SaltandSmooth.data.data1.size(); i++) {
+		String series1 = "OriginalData";
+		String series2 = "SaltedData";
+		String series3 = "SmoothedData";
+		for (int i = 0; i < SaltandSmooth.data.data1.size()-3; i++) {
 			// creates an integer i that will but used as a data point in the making of the
 			// data
-			int a = SaltandSmooth.data.data1.get(i);
-			int c = SaltandSmooth.data.data2.get(i);
+			double a = SaltandSmooth.data.data1.get(i);
+			double c = SaltandSmooth.data.data2.get(i);
+			double e = SaltandSmooth.data.data3.get(i);
 			// creates a string of the integer i to add to the x value of the graph
-			String b = Integer.toString(d);
+			String b = Double.toString(d);
 			d++;
-
+			
 			data.addValue(a, series1, b);
 			data.addValue(c, series2, b);
+			data.addValue(e, series3, b);
 
 		}
 		return data;
