@@ -1,3 +1,5 @@
+package Statlib;
+
 import java.util.Scanner;
 import java.lang.Math;
 

@@ -1,3 +1,4 @@
+package Statlib;
 import java.util.Scanner;
 
 //calls appropriate methods to control what prints

@@ -1,3 +1,4 @@
+package Statlib;
 //Joy Hartsig
 //this program will run 3 different calculators
 //1. Measures of Central Tendency (including variance and standard deviation)
