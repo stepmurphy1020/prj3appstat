@@ -1,3 +1,4 @@
+package Statlib;
 import java.util.Scanner;
 
 public class PermsComs
