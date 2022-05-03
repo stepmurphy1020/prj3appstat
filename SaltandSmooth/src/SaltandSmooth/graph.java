@@ -15,10 +15,9 @@ public class graph extends JFrame {
 	static double d = Main.lowerbound;
 
 	public graph() {
-		// super("Line Chart With Example with JFreechart");
 		JPanel createG = createGraph();
 		add(createG, BorderLayout.CENTER);
-		setSize(640, 640);
+		setSize(1280, 640);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setLocationRelativeTo(null);
 	}
